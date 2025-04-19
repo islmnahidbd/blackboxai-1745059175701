@@ -16,7 +16,7 @@
 </head>
 <body class="bg-gray-50 font-inter text-gray-800">
 
-  <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+  <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
     <!-- Header -->
     <header class="bg-orange-600 flex flex-wrap justify-between items-center p-4 md:p-6">
       <img src="Leogovisa-Profile.jpg" alt="Leogo Visa Logo" class="h-12 md:h-14" />
@@ -30,15 +30,149 @@
 
     <!-- Main Content -->
     <main class="p-6 md:p-8">
-      <h1 class="text-3xl font-semibold text-gray-900 mb-6">Our Plans</h1>
-      <p class="text-gray-600 text-lg max-w-prose">
-        Explore our range of travel eSIM plans designed to keep you connected wherever you go. Choose the plan that fits your travel needs and enjoy seamless internet access across Europe.
+      <h1 class="text-gray-600 text-lg max-w-prose mb-8 font-narrow tracking-tight leading-snug text-center font-bold capitalize" style="font-family: 'Obviouslynarrow', sans-serif;">
+        Plans And Pricing Catered Just For You
+      </h1>
+      <p class="text-gray-600 text-lg max-w-prose mb-8 font-narrow tracking-tight leading-snug text-center font-bold capitalize" style="font-family: 'Obviouslynarrow', sans-serif;">
+        You Deserve The Best, And You Do So Without Breaking The Bank. That's Where We Step In.
       </p>
-      <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>Basic Plan: Affordable data for short trips.</li>
-        <li>Standard Plan: Balanced data and price for regular travelers.</li>
-        <li>Premium Plan: Unlimited data for heavy users and long stays.</li>
-      </ul>
+
+      <!-- Filters (non-functional placeholders) -->
+      <div class="flex flex-wrap gap-6 mb-10">
+        <div>
+          <h3 class="font-semibold mb-2">Speed Capacity</h3>
+          <div class="flex flex-wrap gap-2" id="speedCapacityButtons" role="group" aria-label="Speed Capacity options">
+            <button type="button" class="px-3 py-1 rounded bg-orange-600 text-white text-sm" aria-pressed="true">All</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">1 GB</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">3 GB</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">10 GB</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">30 GB</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">50 GB</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">Unlimited</button>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Choose Validity</h3>
+          <div class="flex flex-wrap gap-2" id="validityButtons" role="group" aria-label="Validity options">
+            <button type="button" class="px-3 py-1 rounded bg-orange-600 text-white text-sm" aria-pressed="true">All</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">1 Month</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">3 Months</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">6 Months</button>
+            <button type="button" class="px-3 py-1 rounded border border-orange-600 text-orange-600 text-sm hover:bg-orange-100" aria-pressed="false">12 Months</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plans Grid -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="plansGrid">
+        <!-- Basic Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="1 GB" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Basic</h2>
+          <p class="text-gray-700 mb-4">1GB high speed with Unlimited data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$10/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+
+        <!-- Standard Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="3 GB" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Standard</h2>
+          <p class="text-gray-700 mb-4">3GB high speed with Unlimited data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$20/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+
+        <!-- Pro Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="10 GB" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Pro</h2>
+          <p class="text-gray-700 mb-4">10GB high speed with Unlimited data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$30/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+
+        <!-- Elite Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="30 GB" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Elite</h2>
+          <p class="text-gray-700 mb-4">30GB high speed data & 5GB Hotspot Data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$40/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+
+        <!-- Supreme Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="50 GB" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Supreme</h2>
+          <p class="text-gray-700 mb-4">50GB high speed data & 10GB Hotspot Data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$50/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+
+        <!-- Ultimate Plan -->
+        <article class="border border-gray-300 rounded-lg p-6 shadow-sm hover:shadow-md transition" data-speed="Unlimited" data-validity="1 Month">
+          <h2 class="text-xl font-semibold mb-2">Ultimate</h2>
+          <p class="text-gray-700 mb-4">Unlimited speed & data with 10GB Hotspot Data</p>
+          <p class="text-orange-600 font-bold text-lg mb-4">$60/month</p>
+          <button class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Get it now</button>
+        </article>
+      </section>
+
+      <!-- Unlimited Calling Section -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Experience the True Essence of Unlimited</h2>
+        <p class="text-gray-700 max-w-prose mb-6">
+          We weren’t kidding when we said ‘Go Unlimited’. Enjoy unlimited calling to 90+ international destinations. Find the full list, including any exceptions here!
+        </p>
+        <div class="border border-gray-300 rounded p-4 bg-white shadow-inner">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-700">
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/dz.png" alt="Algeria Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Algeria - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/as.png" alt="American Samoa Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>American Samoa - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/ad.png" alt="Andorra Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Andorra - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/ao.png" alt="Angola Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Angola - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/ar.png" alt="Argentina Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Argentina - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/aw.png" alt="Aruba Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Aruba - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Australia - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/bd.png" alt="Bangladesh Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Bangladesh - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/be.png" alt="Belgium Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Belgium - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/bm.png" alt="Bermuda Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Bermuda - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/bt.png" alt="Bhutan Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Bhutan - Max Minutes: Unlimited</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:shadow-md transition">
+              <img src="https://flagcdn.com/w40/br.png" alt="Brazil Flag" class="w-8 h-5 object-cover rounded-sm" loading="lazy" />
+              <span>Brazil - Max Minutes: Unlimited</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -47,6 +181,61 @@
         LEOGO VISA | <a href="https://leogovisa.com" class="underline hover:text-orange-200">leogovisa.com</a> | 📞 +880 1601-536462
       </p>
     </footer>
+
+    <script>
+      // JavaScript to make filter buttons selectable and filter plans
+      document.addEventListener('DOMContentLoaded', () => {
+        const speedButtons = document.querySelectorAll('#speedCapacityButtons button');
+        const validityButtons = document.querySelectorAll('#validityButtons button');
+        const plans = document.querySelectorAll('#plansGrid article');
+
+        function updateAriaPressed(buttons, selectedButton) {
+          buttons.forEach(btn => {
+            btn.setAttribute('aria-pressed', btn === selectedButton ? 'true' : 'false');
+            if (btn === selectedButton) {
+              btn.classList.add('bg-orange-600', 'text-white');
+              btn.classList.remove('border', 'border-orange-600', 'text-orange-600');
+            } else {
+              btn.classList.remove('bg-orange-600', 'text-white');
+              btn.classList.add('border', 'border-orange-600', 'text-orange-600');
+            }
+          });
+        }
+
+        function filterPlans() {
+          const selectedSpeed = Array.from(speedButtons).find(btn => btn.getAttribute('aria-pressed') === 'true').textContent;
+          const selectedValidity = Array.from(validityButtons).find(btn => btn.getAttribute('aria-pressed') === 'true').textContent;
+
+          plans.forEach(plan => {
+            const planSpeed = plan.getAttribute('data-speed');
+            const planValidity = plan.getAttribute('data-validity');
+
+            const speedMatch = selectedSpeed === 'All' || planSpeed === selectedSpeed;
+            const validityMatch = selectedValidity === 'All' || planValidity === selectedValidity;
+
+            if (speedMatch && validityMatch) {
+              plan.style.display = '';
+            } else {
+              plan.style.display = 'none';
+            }
+          });
+        }
+
+        speedButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            updateAriaPressed(speedButtons, button);
+            filterPlans();
+          });
+        });
+
+        validityButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            updateAriaPressed(validityButtons, button);
+            filterPlans();
+          });
+        });
+      });
+    </script>
   </div>
 
 </body>
